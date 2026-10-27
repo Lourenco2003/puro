@@ -8,18 +8,22 @@ O protótipo usa HTML produzido por módulos JavaScript, CSS sem framework e sec
 
 Fotografias WebP (e originais para outros recortes), logótipo, direção artística, cores, tipografia de sistema, CSS responsivo, conteúdos aprovados, composição das secções, galeria e padrões acessíveis. Transpor o HTML de cada secção para Liquid, com atenção aos dados dinâmicos e aos estilos por secção. Os módulos JavaScript não se convertem automaticamente em Liquid.
 
-| Protótipo | Destino sugerido no tema |
-| --- | --- |
-| `header`, `footer` | Grupos de secções de cabeçalho/rodapé, menus Shopify |
+| Protótipo                                 | Destino sugerido no tema                                      |
+| ----------------------------------------- | ------------------------------------------------------------- |
+| `header`, `footer`                        | Grupos de secções de cabeçalho/rodapé, menus Shopify          |
 | Hero, introdução, coleção, bloco da marca | `sections/*.liquid` com `schema`, settings e blocos editáveis |
-| `productCard` | `snippets/card-product.liquid` com objeto `product` |
-| Página inicial | `templates/index.json` |
-| Loja | `templates/collection.json` + coleção real |
-| Produto | `templates/product.json` + secção principal de produto |
-| Sobre | `templates/page.about.json` + página e conteúdo aprovado |
-| Carrinho | `templates/cart.json` + secção e formulário reais |
-| `src/data.js` | Produtos, variantes, media, páginas, metafields e settings |
-| CSS / galeria / menu | `assets/`, ajustando eventos ao editor de temas |
+| `productCard`                             | `snippets/card-product.liquid` com objeto `product`           |
+| Página inicial                            | `templates/index.json`                                        |
+| Loja                                      | `templates/collection.json` + coleção real                    |
+| Produto                                   | `templates/product.json` + secção principal de produto        |
+| Sobre                                     | `templates/page.about.json` + página e conteúdo aprovado      |
+| Carrinho                                  | `templates/cart.json` + secção e formulário reais             |
+| `src/data.js`                             | Produtos, variantes, media, páginas, metafields e settings    |
+| CSS / galeria / menu                      | `assets/`, ajustando eventos ao editor de temas               |
+
+## Trailer e cabeçalho
+
+Transpor o destaque para uma secção com um setting `video` do editor Shopify e renderizar o vídeo com os recursos nativos de media. Expor poster, recorte e conteúdo editorial como settings. Aproveitar os comportamentos de pausa, preferência de movimento reduzido e header transparente/branco de `video.js` e `navigation.js`, adaptando o arranque ao ciclo de carregamento de secções do editor de temas. Verificar reprodução automática e recortes em Safari/iOS e no editor; não presumir que um vídeo vertical é adequado a todos os ecrãs.
 
 ## Produtos e variantes
 
